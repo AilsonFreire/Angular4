@@ -64,12 +64,23 @@ class MilleniumFalcon {
 
 let xwing = new MilleniumFalcon("plasma")
 
+//Interfaces
+interface Containership{
+  cargoContainer : number
+}
 
-class tiFi extends Spacecraft {
+
+class tiFi extends Spacecraft implements Containership{
+  //Propriedade (atributo) existente na Interface
+  cargoContainer : number
   
+  /*Método constructor que vai receber os valores passados pelo objeto
+    e salva-los dentro da propriedade (atributo) da classe   
+  */
   constructor()
   {
     super("protóns")
+    this.cargoContainer = 4
   }
 
   jumpIntoHyperspace()
@@ -85,3 +96,10 @@ class tiFi extends Spacecraft {
 
 let spaceship = new tiFi()
 spaceship.jumpIntoHyperspace()
+
+function goodForTheJob(ship : Containership) : boolean
+{
+   return ship.cargoContainer > 2;
+}
+
+console.log(goodForTheJob(spaceship))

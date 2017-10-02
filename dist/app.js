@@ -56,8 +56,13 @@ var MilleniumFalcon = /** @class */ (function () {
 var xwing = new MilleniumFalcon("plasma");
 var tiFi = /** @class */ (function (_super) {
     __extends(tiFi, _super);
+    /*Método constructor que vai receber os valores passados pelo objeto
+      e salva-los dentro da propriedade (atributo) da classe
+    */
     function tiFi() {
-        return _super.call(this, "protóns") || this;
+        var _this = _super.call(this, "protóns") || this;
+        _this.cargoContainer = 4;
+        return _this;
     }
     tiFi.prototype.jumpIntoHyperspace = function () {
         if (Math.random() >= 0.5) {
@@ -71,3 +76,7 @@ var tiFi = /** @class */ (function (_super) {
 }(Spacecraft));
 var spaceship = new tiFi();
 spaceship.jumpIntoHyperspace();
+function goodForTheJob(ship) {
+    return ship.cargoContainer > 2;
+}
+console.log(goodForTheJob(spaceship));

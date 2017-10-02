@@ -32,3 +32,33 @@ function inc (speed : number, inc : number = 1  ) : number {
 
 console.log(`inc(5,1) = ${inc(5,1)}`)
 console.log(`inc(5) = ${inc(5)}`)
+
+class Spacecraft{
+
+  propulsor : string
+
+  constructor (propoulsor : string)
+  {
+    this.propulsor = propoulsor;
+  }
+
+  //Métodos não precisam da palavra function
+  jumpintoHyperspace()
+  {
+    console.log("Entering hyperspace with " + this.propulsor)
+  }
+}
+ 
+
+let falcon = new Spacecraft("hyperdrive") 
+
+//Declarar propriedade (atributo) dentro do método
+class MilleniumFalcon {
+
+  constructor (public propulsor : string)
+  {
+    console.log("Entering hyperspace wiht " + this.propulsor)
+  }
+}
+
+let xwing = new MilleniumFalcon("plasma")

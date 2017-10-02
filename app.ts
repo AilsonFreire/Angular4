@@ -51,6 +51,7 @@ class Spacecraft{
  
 
 let falcon = new Spacecraft("hyperdrive") 
+falcon.jumpintoHyperspace()
 
 //Declarar propriedade (atributo) dentro do método
 class MilleniumFalcon {
@@ -62,3 +63,25 @@ class MilleniumFalcon {
 }
 
 let xwing = new MilleniumFalcon("plasma")
+
+
+class tiFi extends Spacecraft {
+  
+  constructor()
+  {
+    super("protóns")
+  }
+
+  jumpIntoHyperspace()
+  {
+    if( Math.random()>=0.5)
+    { console.log(true)
+      super.jumpintoHyperspace()
+    }else 
+       console.log(false)
+    
+  }
+}
+
+let spaceship = new tiFi()
+spaceship.jumpIntoHyperspace()

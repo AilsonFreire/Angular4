@@ -1,13 +1,5 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+"use strict";
+exports.__esModule = true;
 var message = "Help me Obi-wan Kenobi. You're my only hope";
 console.log(message);
 var episode = 4;
@@ -33,50 +25,11 @@ function inc(speed, inc) {
 }
 console.log("inc(5,1) = " + inc(5, 1));
 console.log("inc(5) = " + inc(5));
-var Spacecraft = /** @class */ (function () {
-    function Spacecraft(propoulsor) {
-        this.propulsor = propoulsor;
-    }
-    //Métodos não precisam da palavra function
-    Spacecraft.prototype.jumpintoHyperspace = function () {
-        console.log("Entering hyperspace with " + this.propulsor);
-    };
-    return Spacecraft;
-}());
-var falcon = new Spacecraft("hyperdrive");
-falcon.jumpintoHyperspace();
-//Declarar propriedade (atributo) dentro do método
-var MilleniumFalcon = /** @class */ (function () {
-    function MilleniumFalcon(propulsor) {
-        this.propulsor = propulsor;
-        console.log("Entering hyperspace wiht " + this.propulsor);
-    }
-    return MilleniumFalcon;
-}());
-var xwing = new MilleniumFalcon("plasma");
-var tiFi = /** @class */ (function (_super) {
-    __extends(tiFi, _super);
-    /*Método constructor que vai receber os valores passados pelo objeto
-      e salva-los dentro da propriedade (atributo) da classe
-    */
-    function tiFi() {
-        var _this = _super.call(this, "protóns") || this;
-        _this.cargoContainer = 4;
-        return _this;
-    }
-    tiFi.prototype.jumpIntoHyperspace = function () {
-        if (Math.random() >= 0.5) {
-            console.log(true);
-            _super.prototype.jumpintoHyperspace.call(this);
-        }
-        else
-            console.log(false);
-    };
-    return tiFi;
-}(Spacecraft));
-var spaceship = new tiFi();
-spaceship.jumpIntoHyperspace();
-function goodForTheJob(ship) {
-    return ship.cargoContainer > 2;
-}
-console.log(goodForTheJob(spaceship));
+/*
+Trabalhando com Módulos
+(export e import de variáveis, funções, classes, interfaces...)
+*/
+var starfighters_1 = require("./starfighters");
+var xWing = new starfighters_1.MilleniumFalcon();
+xWing.showQntContainers();
+xWing.testGoInToHyperspace();

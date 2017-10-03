@@ -33,73 +33,15 @@ function inc (speed : number, inc : number = 1  ) : number {
 console.log(`inc(5,1) = ${inc(5,1)}`)
 console.log(`inc(5) = ${inc(5)}`)
 
-class Spacecraft{
-
-  propulsor : string
-
-  constructor (propoulsor : string)
-  {
-    this.propulsor = propoulsor;
-  }
-
-  //Métodos não precisam da palavra function
-  jumpintoHyperspace()
-  {
-    console.log("Entering hyperspace with " + this.propulsor)
-  }
-}
- 
-
-let falcon = new Spacecraft("hyperdrive") 
-falcon.jumpintoHyperspace()
-
-//Declarar propriedade (atributo) dentro do método
-class MilleniumFalcon {
-
-  constructor (public propulsor : string)
-  {
-    console.log("Entering hyperspace wiht " + this.propulsor)
-  }
-}
-
-let xwing = new MilleniumFalcon("plasma")
-
-//Interfaces
-interface Containership{
-  cargoContainer : number
-}
 
 
-class tiFi extends Spacecraft implements Containership{
-  //Propriedade (atributo) existente na Interface
-  cargoContainer : number
-  
-  /*Método constructor que vai receber os valores passados pelo objeto
-    e salva-los dentro da propriedade (atributo) da classe   
-  */
-  constructor()
-  {
-    super("protóns")
-    this.cargoContainer = 4
-  }
+/*
+Trabalhando com Módulos 
+(export e import de variáveis, funções, classes, interfaces...)
+*/
+import {MilleniumFalcon} from "./starfighters"
 
-  jumpIntoHyperspace()
-  {
-    if( Math.random()>=0.5)
-    { console.log(true)
-      super.jumpintoHyperspace()
-    }else 
-       console.log(false)
-    
-  }
-}
+let xWing = new MilleniumFalcon()
 
-let spaceship = new tiFi()
-spaceship.jumpIntoHyperspace()
-
-function goodForTheJob(ship : Containership) : boolean
-{
-   return ship.cargoContainer > 2;
-}
-
-console.log(goodForTheJob(spaceship))
+xWing.showQntContainers()
+xWing.testGoInToHyperspace()

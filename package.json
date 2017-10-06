@@ -1,0 +1,26 @@
+{
+  "name": "Angular4",
+  "version": "1.0.0",
+  "description": "Pasta de arquivos que serão gerados com o avançar do curso de angular4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AilsonFreire/Angular4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AilsonFreire/Angular4/issues"
+  },
+  "homepage": "https://github.com/AilsonFreire/Angular4#readme",
+  "dependencies": {
+    "lodash": "^4.14.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.77"
+  }
+}

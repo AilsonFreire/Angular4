@@ -30,6 +30,14 @@ Trabalhando com Módulos
 (export e import de variáveis, funções, classes, interfaces...)
 */
 var starfighters_1 = require("./starfighters");
+/*
+  Trabalhando com importar bibliotecas do javascript: npm install --save
+  lodash@4.14
+  definição de tipos npm install --save-dev @types/lodash
+*/
+//Importando todas as definições de lodash
+var _ = require("lodash");
+console.log(_.pad("Typescript Examples", 21, "*"));
 var xWing = new starfighters_1.MilleniumFalcon();
 xWing.showQntContainers();
 xWing.testGoInToHyperspace();

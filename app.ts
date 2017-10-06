@@ -41,6 +41,15 @@ Trabalhando com Módulos
 */
 import {MilleniumFalcon} from "./starfighters"
 
+/*
+  Trabalhando com importar bibliotecas do javascript: npm install --save
+  lodash@4.14
+  definição de tipos npm install --save-dev @types/lodash
+*/ 
+//Importando todas as definições de lodash
+import * as _ from 'lodash'
+console.log(_.pad("Typescript Examples", 21, "*"))
+
 let xWing = new MilleniumFalcon()
 
 xWing.showQntContainers()

@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
+import {Student} from './student.model';
+
 @Component({
   selector: 'jad-student',
   templateUrl: './student.component.html',
@@ -8,12 +10,14 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 })
 export class StudentComponent implements OnInit {
 
- @Input() name : string;
- @Input() isJedi : boolean;
-  
+ @Input() student : Student; 
+   
   constructor() { }
 
   ngOnInit() {
   }
 
+  clicked(){
+    console.log(`Student : ${this.student.name}`);
+  }
 }

@@ -1,6 +1,6 @@
 <div>
-  Student : {{name}}
-  <div [hidden] = "!isJedi">
-    Jedi Temple: Coruscant
+  Student : <a href = "#" (click)="clicked()">{{student.name}}</a>
+  <div *ngIf = "student.isJedi">
+    Jedi Temple: {{student.temple}}
   </div>
 </div>
